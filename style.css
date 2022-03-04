@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1522;
+}
+
+.title {
+    color: aliceblue;
+    margin-bottom: 1000px;
+    font-size: 50px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.heart {
+    height: 140px;
+    margin-bottom: 400px;
+    width: 140px;
+    background: #e74975;
+    position: absolute;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #e74975;
+    animation: heart 0.6s linear infinite;
+}
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+    
+}
+.heart:before {
+    content: '';
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    background: #e74975;
+    top: -50%;
+    border-radius: 100px;
+    box-shadow: -10px 10px 90px #e74975;
+
+}
+
+.heart:after {
+    content: '';
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    background: #e74975;
+    right: -50%;
+    border-radius: 100px;
+}
